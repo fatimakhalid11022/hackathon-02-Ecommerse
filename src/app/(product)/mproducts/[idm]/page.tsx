@@ -1,21 +1,14 @@
-
 import Image from 'next/image'
-import girl1 from "../../../../../public/assets/girl1.png"
-import girl2 from "../../../../../public/assets/girl2.png"
-import girl3 from "../../../../../public/assets/girl3.png"
-import girl4 from "../../../../../public/assets/girl4.png"
-import girl5 from "../../../../../public/assets/girl5.png"
-import girl6 from "../../../../../public/assets/girl6.png"
+
 import girl7 from "../../../../../public/assets/girl7.png"
-import girl8 from "../../../../../public/assets/girl8.png"
-import girl9 from "../../../../../public/assets/girl9.png"
+
 import girl10 from "../../../../../public/assets/girl10.png" 
 import { Button } from '@/components/ui/button'
 import { FiShoppingCart } from "react-icons/fi";
 import Counter from '@/componentsbyme/counter';
 
 interface Product {
- pics:any
+  pics:any
   title: string;
   clothtype: string;
   price: string;
@@ -24,52 +17,12 @@ interface Product {
 
 
 const Allclothes : Product[] =
-    [{pics : girl1,
-     title : "Brushed Raglan Sweatshirt ",
-    price :"$195",
-     clothtype:"Sweater" ,
-    productId:1},
-    {pics : girl2,
-     title : "Cameryn Sash Tie Dress ",
-    price :"$495",
-    clothtype:"Dress"  ,
-    productId:2 },
-    
-    {pics : girl4,
-     title : "Flex Sweatshirt",
-    price :"$135",
-    clothtype:"Sweater"  ,
-    productId:4 },
-    {pics : girl3,
-      title : "Flex SweatPants",
-     price :"$175",
-     clothtype:"Pants" ,
-     productId:3  },
-    {pics : girl5,
-     title : "Pink Fleece SweatPants  ",
-    price :"$195" ,
-    clothtype:"Pants" ,
-    productId:5 },
-    {pics : girl6,
-     title : "Lite SweatPants ",
-    price :"$235",
-    clothtype:"Pants"  ,
-    productId:6},
+    [
     {pics : girl7,
       title : "Flex Push Button Bomber",
       clothtype :"Jackets",
      price :"$595" ,
      productId:7 },
-    {pics : girl8,
-     title : "Muscle Tank ",
-    price :"$25" ,
-    clothtype:"T-shirt"  ,
-    productId:8},
-    {pics : girl9,
-     title : " Brushed Bomber",
-    price :"$365" ,
-    clothtype:"Jackets" ,
-    productId:9 },
     {pics : girl10,
      title : "Raglan Sweatshirt ",
     price :"$95",

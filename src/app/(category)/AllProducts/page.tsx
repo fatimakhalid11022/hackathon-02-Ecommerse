@@ -1,6 +1,8 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import girl1 from "../../../../public/assets/girl1.png"
 import girl2 from "../../../../public/assets/girl2.png"
 import girl3 from "../../../../public/assets/girl3.png"
@@ -69,10 +71,12 @@ const Allclothes =
 ]
 
 function AllProducts ({pics,title,clothtype,price,productId} : any ){
+    
     return(
     <div  className=' pl-16'>
-      
-        <Link href={`/products/${productId}`}>
+       
+        <Link href={`/products/1`} >
+           
         <div className=''>
         <Image src={pics} alt={title} height={375} width={250} className=''/>
         </div>
@@ -106,4 +110,3 @@ function FemaleMix() {
 
 export default FemaleMix;
 
- 

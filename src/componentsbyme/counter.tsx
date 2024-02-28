@@ -12,6 +12,7 @@ export default  function Counter() {
       setCount(a => a - 1);
     }
     return (
+      <>
       <div className='flex '>
         
          <button className='mx-5' onClick={() => {
@@ -23,6 +24,7 @@ export default  function Counter() {
           decrement();
           }}>-</button>
       </div>
+      </>
     );
   }
   

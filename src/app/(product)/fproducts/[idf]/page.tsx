@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import girl1 from "../../../../../public/assets/girl1.png"
 import girl2 from "../../../../../public/assets/girl2.png"
@@ -9,13 +8,13 @@ import girl6 from "../../../../../public/assets/girl6.png"
 import girl7 from "../../../../../public/assets/girl7.png"
 import girl8 from "../../../../../public/assets/girl8.png"
 import girl9 from "../../../../../public/assets/girl9.png"
-import girl10 from "../../../../../public/assets/girl10.png" 
+
 import { Button } from '@/components/ui/button'
 import { FiShoppingCart } from "react-icons/fi";
 import Counter from '@/componentsbyme/counter';
 
 interface Product {
- pics:any
+  pics:any
   title: string;
   clothtype: string;
   price: string;
@@ -70,22 +69,18 @@ const Allclothes : Product[] =
     price :"$365" ,
     clothtype:"Jackets" ,
     productId:9 },
-    {pics : girl10,
-     title : "Raglan Sweatshirt ",
-    price :"$95",
-    clothtype:"T-shirt"  ,
-    productId:10 },
+    
 
 ]
 
 function ProductDetails({ params }: { params: { id: string } }) {
-  const product = Allclothes.find((item) => item.productId === Number(params.id));
+  const fproduct = Allclothes.find((item) => item.productId === Number(params.id));
 
-  if (!product) {
+  if (!fproduct) {
     return <div>Product not found.</div>;
   }
 
-  const { pics, title, clothtype, price, productId } = product;
+  const { pics, title, clothtype, price, productId } = fproduct;
 
   return (
    
@@ -94,14 +89,14 @@ function ProductDetails({ params }: { params: { id: string } }) {
       {/* upper */}
       <div className='flex container'>
       <div className='w-1/6 '>
-        <Image src={product.pics} alt="pic" height={100} width ={100} className='ml-8'/>
+        <Image src={fproduct.pics} alt="pic" height={100} width ={100} className='ml-8'/>
       </div>
       <div>
-      <Image src={product.pics} alt="pic" height={500}/>
+      <Image src={fproduct.pics} alt="pic" height={500}/>
       </div>
       <div className='ml-5'>
-       <h1 className='mt-3 text-3xl  w-72'>{product.title}</h1>
-       <h2 className='font-bold text-xl text-gray-400 '>{product.clothtype}</h2>
+       <h1 className='mt-3 text-3xl  w-72'>{fproduct.title}</h1>
+       <h2 className='font-bold text-xl text-gray-400 '>{fproduct.clothtype}</h2>
        <ul className='font-semibold mt-6'>SELECT SIZE</ul>
        <h6 className='font-semibold text-gray-700 flex my-6'>
           <p className='mr-5'>XS</p>
@@ -117,7 +112,7 @@ function ProductDetails({ params }: { params: { id: string } }) {
               <Button className='bg-black text-white'>
               <FiShoppingCart className='text-3xl p-1 pl-2'/>
                 Add to Cart</Button>
-                <p className='text-3xl font-bold pl-3'>{product.price}</p>
+                <p className='text-3xl font-bold pl-3'>{fproduct.price}</p>
              </div>
 
       </div>

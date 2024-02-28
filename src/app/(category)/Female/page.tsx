@@ -10,6 +10,7 @@ import girl7 from "../../../../public/assets/girl7.png"
 import girl8 from "../../../../public/assets/girl8.png"
 import girl9 from "../../../../public/assets/girl9.png"
 import girl10 from "../../../../public/assets/girl10.png" 
+import Link from 'next/link';
 
 
 const female =
@@ -57,6 +58,7 @@ const female =
 function Products ({pics,title,clothtype,price} : any ){
     return(
     <div className=' pl-16'>
+        <Link href={`fproducts/1`}>
         <div className=''>
         <Image src={pics} alt={title} height={375} width={250} className=''/>
         </div>
@@ -64,6 +66,7 @@ function Products ({pics,title,clothtype,price} : any ){
         <h3 className='font-semibold text-md text-gray-500 mt-1'>{clothtype}</h3>
         <h1 className='text-xl font-semibold mt-3 mb-6'>{price}
         </h1>
+        </Link>
     </div>
     )
 }
